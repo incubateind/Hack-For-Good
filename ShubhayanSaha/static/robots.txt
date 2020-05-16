@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Disallow: /templates
+Sitemap: https://surakshacovid19.tech/sitemap.xml
