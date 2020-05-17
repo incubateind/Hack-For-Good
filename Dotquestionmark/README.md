@@ -12,7 +12,7 @@ The App DotEpid is developed by following team members:
 | Kshitiz Saini | kshitizsaini.rtk@gmail.com |
 | Sarthak Jain | mrsarthak001@gmail.com |
 | Siddharth Chopra | siddharthchopra555@gmail.com |
-| Pulkit | sinhapulkit768@gmail.com |
+
 
 ## How are we solving the Problem statements
 
