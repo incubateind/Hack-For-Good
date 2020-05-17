@@ -1,5 +1,5 @@
 # Hack for Good: COVID-19
-Project Submission for Hack for good starting 6th May.
+Project Submission for Hack for good starting 17th May.
 
 ## Submission Procedure
 Read the following steps and guidelines properly for proper submission of your project. Missing out any step or performing it wrongly can lead to unsuccessful submission. 
