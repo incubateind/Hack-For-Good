@@ -1,0 +1,20 @@
+#1 description of the project
+	ThiS project is an app that can take the user data and show the user a probability of infection.
+	As asymptomatic patients are the major transmitters of the infection this app nwwds to be updated daily
+	with the user data inorder to check probability of the infection on a daily basis. This app will also act like 
+	a gate pass in any organisation, institutions, public transports, social gatherings, etc.
+	In fact, user gets a specified colour coded QR code which will give access to the user's physical stats and the probability of infection.
+
+
+#2 Contents of the project directory:
+	1. Templates: folder containing all the html files
+	2. Data set(Dummy) :generated using excel spreadsheet
+	3. flask files
+	4. main.py: main python file 
+	5. model.pkl: for dumping the data
+	6. train.py: python machine learning model code 
+
+#3 Directions to host the project on localhost:
+	1. open the project directory
+	2. run the main.py in the terminal
+	3. follow the link in the terminal
