@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+      
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+        
+         /* height: 100vh; */
+        }
+     
+     .hhh{
+      display: flex; 
+      justify-content: center;
+      align-items: center; 
+      margin: -30px;
+
+     }
+
+     
+
+     input[type=submit] {
+          align-items: center;
+          width: 11%;
+          border: none;
+          background: #60adde;
+          opacity: 0.7;
+          border-radius: 20px;
+          font-size: 20px;
+        }
+      
+    header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px 70px;
+        }
+        .nav-area{
+          list-style: none;
+        }
+        .nav-area li{
+          display: inline-block;
+          padding: 0 15px;
+          text-transform: uppercase;
+        }
+        .nav-area li a{
+          color: #fff;
+
+        }
+        .nav-area li a:hover{
+          color: #006c87;
+        }
+        .btn-area{
+          cursor: pointer;
+          color: #fff;
+          font-size: 16px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          padding: 10px 30px;
+          border-radius: 5px;
+          background-color: #006c87;
+        }
+.kk{
+  padding: 2px 2px 2px 2px;
+}    
+
+.hhh {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#90f3b3), color-stop(#90e9f3), color-stop(#909ff3), color-stop(#cc90f3), color-stop(#f390d1), color-stop(#f39a90), color-stop(#f3e590), to(#b8f390)) repeat scroll 0% 0%/200% 200%;
+  background: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
+      background-clip: border-box;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hhh:hover {
+  -webkit-animation: GradientAnimation 2s ease infinite;
+  animation: GradientAnimation 2s ease infinite;
+}
+
+@keyframes  GradientAnimation  {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-area">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">contact us</a></li>
+          </ul>
+        </nav>
+        <a class="btn-area" href="#">login</a>
+    
+      </header>
+    <h1 class=hhh>Covid-19 Probability Detector</h1>
+    <p style="text-align: center; padding: 50px; font-size: xx-large;">Possibility of being affected by covid-19 is {{inf}}% </p>
+    
+    
+    <a style="text-align: center; padding: 50% 45%;" href="/">
+      <input type="submit" value="Go back">
+    </a>
+    <h1 class="hhh" style="padding: 5%;">Thank You</h1>
+    
+</body>
+</html>

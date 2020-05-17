@@ -1,0 +1,4 @@
+1. open folder.
+2. open terminal on that location.
+3. type python main.py.
+4. copy url and paste on browser.

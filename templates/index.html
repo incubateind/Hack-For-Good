@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+      background: rgba(14, 2, 48, 0.89);
+        }
+header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 67px;
+        }
+        .nav-area{
+          list-style: none;
+        }
+        .nav-area li{
+          display: inline-block;
+          padding: 0 15px;
+          text-transform: uppercase;
+        }
+        .nav-area li a{
+          color: #fff;
+
+        }
+        .nav-area li a:hover{
+          color: #006c87;
+        }
+        .btn-area{
+          cursor: pointer;
+          color: #fff;
+          font-size: 16px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          padding: 10px 30px;
+          border-radius: 5px;
+          background-color: #006c87;
+        }
+
+        form{
+          max-width: 350px;
+          border-radius: 20px;
+          margin: auto;
+          background: rgba(0, 0, 0, 0.8);
+          box-sizing: border-box;
+          padding: 40px;
+          color: #fff;
+          margin-top: 100px;
+        }
+
+
+        label {
+          width: 100%;
+          /* box-sizing: border-box; */
+          /* padding: 12px 5px; */
+          background: rgba(0, 0, 0, 0.10);
+          border: none;
+          /* border-bottom: 1px dotted #fff; */
+          color: #fff;
+          border-radius: 5px;
+          font-weight: bold;
+        }
+
+        input[type=submit] {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 10px 0;
+          margin-top: 30px;
+          outline: none;
+          border: none;
+          background: #60adde;
+          opacity: 0.7;
+          border-radius: 20px;
+          font-size: 20px;
+          color: #200707;
+        }
+
+        .hhh{
+      /* height: 100vh; */
+      display: flex; 
+      justify-content: center;
+      align-items: center; 
+      margin: -30px;
+    }
+
+.hhh {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#90f3b3), color-stop(#90e9f3), color-stop(#909ff3), color-stop(#cc90f3), color-stop(#f390d1), color-stop(#f39a90), color-stop(#f3e590), to(#b8f390)) repeat scroll 0% 0%/200% 200%;
+  background: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
+      background-clip: border-box;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hhh:hover {
+  -webkit-animation: GradientAnimation 2s ease infinite;
+  animation: GradientAnimation 2s ease infinite;
+}
+
+@keyframes  GradientAnimation  {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <nav class="nav-area">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">contact us</a></li>
+          </ul>
+        </nav>
+        <a class="btn-area" href="#">login</a>
+    
+    </header>
+
+
+    <h1 class=hhh>Covid-19 Probability Detector</h1>
+
+    
+    <form action="/" method="POST">
+        <h2>Covid-19 Probability Detector</h2>
+        <label for="Fever" style="color: red;" >Fever:</label>
+        <div>
+            <input type="text" name="Fever" id="Fever" placeholder="Fever">
+        </div>
+        <br>
+
+        <label for="Age" style="color: red;">Age:</label>
+        <div>
+            <input type="text" name="Age" id="Age" placeholder="Age">
+        </div>
+        <br>
+
+        <label for="BodyPain" style="color: red;">Body Pain</label>
+        <div>
+            <select name="BodyPain" id="BodyPain">
+            <option value="-1" selected>Low</option>
+            <option value="0">Medium</option>
+            <option value="1" >High</option>
+        </select>
+        </div>
+        <br>
+
+        <label for="RunnyNose" style="color: red;">Runny Nose</label>
+        <div>
+            <select name="RunnyNose" id="RunnyNose">
+            <option value="-1" selected>Low</option>
+            <option value="0">Medium</option>
+            <option value="1" >High</option>
+        </select>
+        </div>
+        <br>
+
+        <label for="DiffBreath" style="color: red;">Difficuilty in Breathing</label>
+        <div>
+            <select name="DiffBreath" id="DiffBreath">
+            <option value="-1" selected>Low</option>
+            <option value="0">Medium</option>
+            <option value="1" >High</option>
+        </select>
+        </div>
+        <br>
+
+        <div>
+            
+            <input type="submit" value="Submit now">
+            
+        </div>
+    </form>
+        
+
+</body>
+</html>
