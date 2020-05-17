@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.snapsid.dotquestionmark.activity.Helpline">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="HELPLINE"
+        android:textColor="#000000"
+        android:textSize="36sp" />
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView4"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/que1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="NATIONAL HELPLINE NUMBER"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="CENTRAL HELPLINE NUMBER"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="MYGOV WHATSAPP NUMBER"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="ANDHRA PRADESH"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="ARUNACHAL PRADESH"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="ASSAM"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="BIHAR"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="CHATTISGARH"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="GOA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="GUJRAT"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="HARYANA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="HIMACHAL PRADESH"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="JHARKHAND"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="KARNATAKA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="KERELA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="MADHYA PRADESH"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="MAHRASHTRA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="MANIPUR"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="MEGHALAYA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="MIZORAM"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="NAGALAND"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="ODISHA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="WEST BENGAL"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="ANDAMAN AND NICOBAR ISLAND"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="CHANDIGARH"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="DELHI"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="DADRA AND NAGAR HAVELI, DAMAN AND DEU"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="JAMMU AND KASHMIR"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="LADHAK"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="LAKSHADWEEP"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="PUNJAB"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/rj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="RAJASTHAN"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="SIKKHIM"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="TAMIL NADU"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="TELENGANA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="TRIPURA"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="UTTRAKHAND"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="UTTAR PRADESH"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
