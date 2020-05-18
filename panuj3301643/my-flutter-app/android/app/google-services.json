@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "783968728105",
+    "firebase_url": "https://cchat-22bfd.firebaseio.com",
+    "project_id": "cchat-22bfd",
+    "storage_bucket": "cchat-22bfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783968728105:android:0d96c96a98577b35f15838",
+        "android_client_info": {
+          "package_name": "com.center.hello_world"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783968728105-enfq0b9b4roigsvfrg8nc8fptues9io7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7IGRDCtNx3bM3EAYXMErXIQRQ92uIEqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783968728105-enfq0b9b4roigsvfrg8nc8fptues9io7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
