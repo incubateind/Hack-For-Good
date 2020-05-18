@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://surakshacovid19.tech/</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://surakshacovid19.tech/tracker</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surakshacovid19.tech/indiastat</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surakshacovid19.tech/indiastate</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surakshacovid19.tech/tst</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surakshacovid19.tech/team</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surakshacovid19.tech/faq</loc>
+  <lastmod>2020-04-21T07:02:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>

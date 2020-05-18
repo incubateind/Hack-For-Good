@@ -1,0 +1,11 @@
+Ways to run the Dashboard
+
+1) Install all the dependencies from requirements.txt
+
+ ~ cd to the ShubhayanSaha(suraskshacovid19) where requirements.txt is located.
+ ~ activate your virtualenv.
+ ~ run: pip install -r requirements.txt in your shell.
+
+2) To run the project simply type the following command in cmd
+
+ ~ flask run
