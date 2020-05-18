@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>HELP US MAKE A CHANGE</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css')}}">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+      <!--animate css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/animate-wow.css')}}">
+      <!--main css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select.min.css')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.min.css')}}">
+      <!--responsive css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
+   </head>
+   <body>
+       <header id="header" class="top-head">
+         <!-- Static navbar -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-4 col-sm-12 left-rs">
+                  </div>
+                  <div class="col-md-8 col-sm-12">
+                     <div class="right-nav">
+                        <div class="login-sr">
+                           <div class="login-signup">
+                              <ul>
+                                 <li><h2></h2></li>
+                                 <li><a href="/login_page">Login</a></li>
+                                 <li><a class="custom-b" href="/register">Sign up</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.container-fluid -->
+         </nav>
+      </header>
+      <div class="page-content-product">
+         <div class="main-product">
+            <div class="container">
+               <div class="row clearfix">
+                  <div class="find-box">
+                     <h1>HELP US MAKE A CHANGE</h1>
+                  </div>
+               </div>
+               <div class="row clearfix">
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage1">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/1.jpg')}}" alt="" />
+                            <h4>MCKS Food for the Hungry</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white">MCKS Food for the Hungry Foundation is a non-profit organisation. </p>
+                                <p style="text-align: justify;width: 80%;color: white">Our mission is no should have to sleep hungry   </p></center>
+                            <a style="color: white" href="/productpage1">Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage2">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/2.jpg')}}" alt="" />
+                            <h4>Youth Feed India</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white">Feed the Hungry!!– a Youth Feed India & SAFA initiative in AP.     </p>
+                                <p style="text-align: justify;width: 80%;color: white">We help the poor by introducing sustainable livelihoods.  </p></center>
+                            <a style="color: white" href=/productpage2>Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage3">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/4.jpg')}}" alt="" />
+
+                            <h4>Kashtakari Panchayat</h4>
+                         <center><p style="text-align: justify;width: 80%;color: white">Waste pickers are in among the frontline, fighting corona virus   </p>
+                                <p style="text-align: justify;width: 80%;color: white">We are still providing our waste collection services...</p></center>
+                            <a style="color: white" href=/productpage3>Continue Reading...</a></div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage4">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/5.png')}}" alt="" />
+
+                            <h4>Goonj</h4>
+                         <center><p style="text-align: justify;width: 80%;color: white">Not forgetting the ignored and vulnerable, our services goes on   </p>
+                                <p style="text-align: justify;width: 80%;color: white">We are helping the migrants by providing them with...</p></center>
+                            <a style="color: white" href=/productpage4>Continue Reading...</a></div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage5">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/102.jpg')}}" alt="" />
+                            <h4>Sharnarthi Sewa</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white">Sharnarthi Sewa-An Organization Helping Hand Always Ready To Serve.</p>
+                                <p style="text-align: justify;width: 80%;color: white">As a non-government organisation we serve the needy...</p></center>
+                            <a style="color: white" href=/productpage5>Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage6">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/10.jpg')}}" alt="" />
+                            <h4>Khushiyaan Foundation</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white">We provide healthy, freshly cooked meals to children on the streets</p>
+                                <p style="text-align: justify;width: 80%;color: white">We visit the adopted slums to feed the underprivileged kids</p></center>
+                            <a style="color: white" href=/productpage6>Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage7">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/12.jpg')}}" alt="" />
+                            <h4>United Way Mumbai</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white">We envision a nation where all the people achieve their human potential.</p>
+                                <p style="text-align: justify;width: 80%;color: white">This is only possible through, education, money and healthy lives</p></center>
+                            <a style="color: white" href=/productpage7>Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage8">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/3.png')}}" alt="" />
+                            <h4>Akshaya Patra Foundation</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white"> We provide relief by providing food to thousands of people across the country.</p>
+                                <p style="text-align: justify;width: 80%;color: white">Since the COVID-19 crisis, we have been in close coor...</p></center>
+                            <a style="color: white" href=/productpage8>Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+                   <div class="col-lg-4 col-sm-6 col-md-3">
+                     <a href="/productpage9">
+                        <div class="box-img">
+                           <img src="{{ url_for('static', filename='images/product/13.jpg')}}" alt="" />
+                            <h4>Uday Foundation</h4>
+                            <center><p style="text-align: justify;width: 80%;color: white">The Uday Foundation works on health, support and dignity.       </p>
+                                <p style="text-align: justify;width: 80%;color: white">We are providing all necessary help and services to...</p></center>
+                            <a style="color: white" href=/productpage9>Continue Reading...</a>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!--main js-->
+      <script src="{{ url_for('static', filename='js/jquery-1.12.4.min.js')}}"></script>
+      <!--bootstrap js-->
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap-select.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/slick.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/wow.min.js')}}"></script>
+      <!--custom js-->
+      <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+   </body>
+
+<!--Ekhan theke ankit likheche-->
+<body>
+<style>
+  body{
+    background-color: #09284b;
+  }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+ th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: #007dea;
+}
+
+td {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tr:hover {background-color:#65d2fc;}
+
+</style>
+
+
+<h3 align="center" style="color: white">This Weeks Top Donors</h3>
+<br>
+<hr style="color: white">
+<br>
+
+<table align="center">
+  <tr>
+    <th>Rank</th>
+    <th>Name</th>
+    <th>Donation</th>
+  </tr>
+  <tr>
+    <td>1#</td>
+    <td>Zunaid Hossain</td>
+    <td>Rs.1,00,000</td>
+  </tr>
+  <tr>
+    <td>2#</td>
+    <td>Nillohit Manna</td>
+    <td>Rs.85,000</td>
+  </tr>
+  <tr>
+    <td>3#</td>
+    <td>Ayush Ghosh</td>
+    <td>Rs.82,000</td>
+  </tr>
+  <tr>
+    <td>4#</td>
+    <td>Ankit Rana</td>
+    <td>Rs.65,000</td>
+  </tr>
+  <tr>
+    <td>5#</td>
+    <td>Trisit Das</td>
+    <td>Rs.52,000</td>
+  </tr>
+  <tr>
+    <td>6#</td>
+    <td>Aaryaman Maity</td>
+    <td>Rs.50,000</td>
+  </tr>
+  <tr>
+    <td>7#</td>
+    <td>Pratik Ranjan</td>
+    <td>Rs.48,000</td>
+  </tr>
+  <tr>
+    <td>8#</td>
+    <td>Nirban Roy</td>
+    <td>Rs.30,000</td>
+  </tr>
+  <tr>
+    <td>9#</td>
+    <td>Ayush Mali</td>
+    <td>Rs.24,000</td>
+  </tr>
+  <tr>
+    <td>10#</td>
+    <td>Pushan Datta</td>
+    <td>Rs.20,000</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+
+<!--ato obdi ankit likheche-->
+
+
+
+</html>
