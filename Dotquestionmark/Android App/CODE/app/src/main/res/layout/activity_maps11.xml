@@ -1,0 +1,112 @@
+<FrameLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment android:id="@+id/map"
+
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        tools:context="com.androidtutorialpoint.googlemapsnearbyplaces.MapsActivity"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <Button
+
+            android:id="@+id/btnPolice"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:onClick="onClick"
+            android:text="Restaurant"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/atmid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="atm"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bankid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bank"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/groceryid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grocery/supermarket"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/despartid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deparmental Store"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/doctorid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor"
+            android:visibility="gone" />
+
+        <Button
+
+            android:id="@+id/btnHospital"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:onClick="onClick"
+
+            android:text="Hospitals"
+
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/policeid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Police"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/fireid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fire Station"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

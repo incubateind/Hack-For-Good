@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">DotEpid</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_api_key1">AIzaSyDxRfxqFdgUlccCFu65mDq2C9Ao33G9q4A</string>
+
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="initial_score">Score 0/13</string>
+
+
+    <string name="incorrect_toast">Wrong!</string>
+    <string name="correct_toast">You got it!</string>
+    <string name="question_0">What is your gender?</string>
+    <string name="question_b">Do you have any of these health conditions?\n\n\n
+        Asthma, Chronic lung disease, Diabetes, Heart Diseases, Immuno-compromised condition</string>
+    <string name="question_a">Have you or someone in your family visited China, Italy, Spain, Iran or Europe in last 14 days?</string>
+    <string name="question_1">Have you someone in your family travelled within India in public transport and came in close contact with someone with cough, cold, fever and shortness of breath in the last 14 days?</string>
+    <string name="question_2">Have you or someone in your family come in close contact with a confirmed COVID-19 patient in the last 14 days?</string>
+    <string name="question_3">Do you have fever?</string>
+    <string name="question_4">Do you have headache?</string>
+    <string name="question_5">Do you have cough?</string>
+    <string name="question_6">Do you have cold?</string>
+    <string name="question_7">Do you have sore throat?</string>
+    <string name="question_8">Do you feel shortness of breath?</string>
+    <string name="question_9">Do you have coarseness invoice?</string>
+    <string name="question_10">Buzz Aldrin\'s mother\'s maiden name was \"Moon\".</string>
+    <string name="question_11">The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.</string>
+    <string name="question_12">No piece of square dry paper can be folded in half more than 7 times.</string>
+    <string name="question_13">Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.</string>
+
+    <string name="state_name">Rajasthan</string>
+    <string name="todo">TODO</string>
+    <string name="confirmed"><b>Confirmed</b></string>
+    <string name="india">INDIA</string>
+    <string name="states_ut">STATES/UT:</string>
+    <string name="info_covid19_tracker">INFO COVID19 TRACKER</string>
+
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_again">Confirm Password</string>
+    <string name="prompt_msg">Type a message</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_register">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_send">Send</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">Password too short or does not match</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="sample_message">Hello!</string>
+
+    <string name="GetLocation">Get Loaction</string>
+    <string name="LocationDisplay">Location here...</string>
+    <string name="Latitude">Latitude</string>
+    <string name="Longitude">Longitude</string>
+
+    <string-array name="cityUttrakhand">
+        <item>Select your District</item>
+        <item>Almora</item>
+        <item>Bageshwar</item>
+        <item>Chamoli</item>
+        <item>Champawat</item>
+        <item>Dehradun</item>
+        <item>Garhwal (Pauri Garhwal)</item>
+        <item>Haridwar</item>
+        <item>Nainital</item>
+        <item>Pithoragarh</item>
+        <item>Rudraprayag</item>
+        <item>Tehri Garhwal</item>
+        <item>Udham Singh Nagar</item>
+        <item>Uttarkashi</item>
+
+    </string-array>
+
+    <string-array name="typeShop">
+        <item>Select Type</item>
+        <item>Confectionary Shop</item>
+        <item>Grocery Shop</item>
+        <item>Provision Store</item>
+        <item>Medical Store</item>
+        <item>Milk Store</item>
+        <item>Vegetable Shop</item>
+        <item>Others</item>
+
+
+    </string-array>
+    <string-array name="nearby_option">
+
+        <item>Select a Type</item>
+        <!--        <item>Airport</item>-->
+        <item>ATM</item>
+        <item>Bank</item>
+        <item>Bakery</item>
+        <!--        <item>Bar</item>-->
+        <!--        <item>Book Store</item>-->
+        <!--        <item>Bus Station</item>-->
+        <!--        <item>Car Rental</item>-->
+        <!--        <item>Car Repair</item>-->
+        <!--        <item>Car Wash</item>-->
+        <!--        <item>Coffee Shop</item>-->
+        <!--        <item>Clothing Store</item>-->
+        <item>Dentist</item>
+        <item>Doctor</item>
+        <!--        <item>Electronics Store</item>-->
+        <!--        <item>Embassy</item>-->
+        <item>Fire_Station</item>
+        <item>Gas_Station</item>
+        <!--        <item>Govt Office</item>-->
+        <!--        <item>Gym</item>-->
+        <item>Hospital</item>
+        <!--        <item>Jewelry Store</item>-->
+        <!--        <item>Laundry</item>-->
+        <!--        <item>Mosque</item>-->
+        <!--        <item>Movie Theater</item>-->
+        <!--        <item>Park</item>-->
+        <item>Pharmacy</item>
+        <item>Police</item>
+        <!--        <item>Post Office</item>-->
+        <item>Restaurant</item>
+        <!--        <item>School</item>-->
+        <item>Department_Store</item>
+        <item>Grocery_or_Supermarket</item>
+
+        <!--        <item>University</item>-->
+
+
+    </string-array>
+</resources>

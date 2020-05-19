@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.snapsid.dotquestionmark.activity.Faq">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:paddingTop="20dp"
+
+        android:text="FREQUENTLY ASKED QUESTIONS"
+        android:textColor="#000000"
+
+        android:textSize="36sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/textView"
+
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/que1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="What is coronavirus disease 2019 (COVID-19)?"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="What is a novel coronavirus?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Are there any vaccines or other medical products to prevent COVID-19?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Are antibiotics effective in preventing or treating COVID-19?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Can SARS-CoV-2, the virus that causes COVID-19, be transmitted by blood transfusion?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Does COVID-19 present a risk to the safety of the nation’s blood supply?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Is there a test for COVID-19?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Should I purchase personal protective equipment such as facemasks or N95 respirators for me and my family?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Is food imported to the United States from China and other countries affected by coronavirus disease 2019 (COVID-19), at risk of spreading COVID-19?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Can I get sick with COVID-19 from touching food, the food packaging, or food contact surfaces, if the coronavirus was present on it?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Can animals get novel coronavirus disease (COVID-19)?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="If I have COVID-19, can I infect my pet? Can I get COVID-19 from my pet?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/qu13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/butshapeblack"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Why aren’t blood centers testing donors for SARS-CoV-2?"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

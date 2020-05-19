@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "96285688771",
+    "firebase_url": "https://firetry-ab944.firebaseio.com",
+    "project_id": "firetry-ab944",
+    "storage_bucket": "firetry-ab944.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96285688771:android:875a9884f783f4482cf376",
+        "android_client_info": {
+          "package_name": "com.example.firebasecovidtry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96285688771-u5jd1493f50msf4r4b3ju7njri6bjdnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd9LZJjeV-MZ1hsY19xheXBU0Gcfqbnq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96285688771-u5jd1493f50msf4r4b3ju7njri6bjdnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96285688771:android:5fc70a2b942b8b942cf376",
+        "android_client_info": {
+          "package_name": "com.snapsid.dotquestionmark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96285688771-u5jd1493f50msf4r4b3ju7njri6bjdnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd9LZJjeV-MZ1hsY19xheXBU0Gcfqbnq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96285688771-u5jd1493f50msf4r4b3ju7njri6bjdnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
