@@ -1,0 +1,499 @@
+﻿COVID Touch App using Deep Learning, Computer Vision
+
+
+Introduction and related works :
+
+
+Nowadays as we all know the Covid-19 pandemic is spread like fire all over the world, so keeping the Covid-19 pandemic in the perspective, unknowing touches between persons increases the spreading of the virus. Keeping in mind the public places that are visited by people on a daily basis, we came up with a model that keeps tracking the contacts made by our hands with different objects around us in the vicinity of the camera.
+In our scenario, we considered ATMs and Shopping Markets are the places that need this model for regulation of the COVID-19 spread. Hand movements and sanitizing of hands can be detected, thereby providing necessary information to him and other people who are up for visiting that place. Every detail of touching, timestamps, and skeleton information is stored in a database and using cloud functions to trigger notifications to citizens whenever they touch their face without washing/sanitizing hands. Also sense if a person wore a mask, gloves then only he/she will have access to public places.
+Continuous camera monitoring can be achieved by installing the model at places like ATMs, Shopping malls where doors are touched frequently and supermarkets where people get in contact with different objects(Fruits, Vegetables) so that the officials now only need to sanitize that particular area instead of sanitizing the whole market. It also will help Police officials to track travel, engagement history of Covid-19 positive patients.
+
+
+Abstract:
+The world is suffering from the COVID pandemic. Out of empathy we want to serve the planet with whatever possible we can do. So, we came up with an idea to maintain physical distancing and tracking sanitizing of each person at public places including ATMs and Super-markets for better living of the society. Thus, we thought that detection models can serve the need of our idea as monitoring each person is very difficult. And our model can be deployed easily making use of the existing cc cameras so that it can be installed seamlessly so it is best used by the society.
+
+
+Link for Video Demo : https://youtu.be/iwSNO8O-xvY
+
+
+Methodologies :
+YOLO:
+
+
+
+
+If we are able to monitor people who are making contact with different objects around them, then we can prevent these diseases from spreading.
+Our project used YOLOv3 for object detection to recognize the touches made by people near ATMs which is a place that we visit frequently.
+
+
+
+
+Working of YOLOv3:  
+
+
+This model is fast and accurate enough to recognize different objects. YOLO uses a regression mechanism unlike other organisms. 
+YOLO model on runtime recognizes the images in each frame and updates the table when required. It is a Convolutional Neural Network(CNN) that is used as object detection in real-time. Each frame is divided into regions with boundary probabilities. Then boxes are weighed accordingly to distinguish between different objects.
+
+
+
+
+Benefits of using YOLO:
+
+
+1. It is fast and accurate
+2. It takes the entire image into consideration thereby encodes contextual 
+information about its appearance
+3. YOLO learns generalized information making it better than most of the 
+algorithms out there.
+4. It divides a single frame into different regions for fastness.
+5. End to end training network makes its performance better.
+
+
+Disadvantages:
+1. YOLO cannot recognize objects which are very close to each other
+
+
+Darknet:
+
+
+It can be installed along with 2 dependencies - 1. OpenCV 2. CUDA.The computation power can be increased by shifting the process to GPU 
+from CPU using darknet.OpenCV along with darknet gives more freedom to the model for detecting different images and videos
+.Darknet flexibility makes it a favorite model for use. Tiny darknet is one such thing that helps in reducing computations allowing a lot more flexibility to the model.
+.YOLO belongs to darknet which is highly helpful in real-time object detections. Considered as user-friendly as it supports all environments
+(like Linux, windows, etc). For many workloads, OpenCV built from scratch should be done before using darknet to the fullest.
+
+
+OpenCV::
+
+
+In our project to act as a binder for darknet/yolov3 OpenCV should be built from scratch. As we used darknet/yolov3 for custom training we need to build OpenCV from scratch as darknet/yolov3 is written in c++. After custom training in our project, we used a custom python wrapper function for tracking(deep sort), detecting objects. We used OpenCV-contrib to further enhance the source OpenCV also used OpenCV for image/video manipulations like opening of the webstream, Contours(rectangular boxes) are also constructed using OpenCV.
+
+
+About Opencv functionalities:
+Opencv is a computer vision library that has 2500+ optimized algorithms for computer vision and machine learning. These algorithms in detailed manner help to detect, identify and recognize faces and objects, classify human actions, track camera coordinates or movements, extract 3D,2D models from the image and for manipulating with the camera and video, image stream like stitching images(frames) together to form a scene, search a test image by traversing through all dir/files/browse through web or find in core image(template matching), image comparisons, static and dynamic object detections, etc.
+
+
+
+
+  
+
+We used box overlapping method to detect touch and hand coming to face features of our project eg: If you assume red box as door and a white box as hands then whenever in output white box touches/overlaps/comes inside the red box then it means hand touching the door
+
+
+
+
+
+
+/* How the image capture is worked(for touch, wash, detect)
+1)We capture the image from the cc_cameras and we can use the existing cc_camera with raspberry pi(if computations are not supported) or old phone, but as most of the cc_cameras send their video stream directly to local storage or computer then we will connect those(computer, raspberry, mobile(terminus app)) to GCP cloud shell and run the startup script which we configure everything for the app and then cc_cameras’ source(computer, raspberry pi, phone) from local storage(if available) send to the cloud storage and all the detections(algorithms various based on situation(touch, wash, detect)) are done on premises only(computer, raspberry pi, phone) or on-air(cloud endpoint and then send to cloud storage ) and the details of the objects, coordinates, etc send to the realtime database and cloud functions and pub/sub reacts accordingly as given in the project procedure*/
+
+
+Posenet::
+
+
+We used Posenet for wash action in our project. Its a computer vision model. Our function returns poses info(wrist left/right points,etc),skeleton(elbow,arms lines etc) info, key points,confidence and accuracy score for all properties..It is a robust and real-time monocular six degree of freedom relocalization system. It is trained on a convolutional neural network to regress the 6-DOF camera pose from a single RGB image in an end-to-end manner with no need for additional engineering or graph optimization. The algorithm can operate indoors and outdoors in real-time, taking 5ms per frame to compute. It obtains approximately 2m and 3◦accuracy for large scale outdoor scenes and 0.5m and 5◦accuracy indoors. It uses a 23 layer deep convnet, demonstrating that convnet can be used to solve complicated out of image plane regression problems. This was made possible by leveraging transfer learning from large scale classification data. Its techniques are so powerful that even SIFT algorithms sometimes fail where it stands like in lighting, motion blur, and different camera intrinsics conditions.
+
+
+  
+
+We used posenet to detect washing/sanitizing hands with calibrated measures for the actions following figure shown above is how we used the posenet as you can see we calibrated for the coordinated of wrist and skeleton of the arms/elbow(both left and right)  to get close to accurate coordinates for washing/sanitizing action(custom model) and found out to be delta(x)<=100 and delta(y)<=10 taking modulus of difference. Posenet’s poses and skeleton helped for us to build a model out of it for custom washing/sanitizing actions
+
+
+For detections(hand to face)::
+
+
+We used tensorflow.js for the hand and face detection which in turn used for hand bring closer to face action
+
+
+  
+
+
+
+We used box overlapping method here too so if the white box(hand) touches/overlaps/comes inside of the blue box(face) then it means detection of had bringing closer is asserted and assuming red box to be the frame of pc/laptop
+
+
+
+
+All the detections made in touch, wash, detect, their results are sent to cloud so that all action will be synced, for seamless integration with ATM/markets cc camera which sends the video(frame series) stream to cloud, where cloud function diminishes the size of the video to save computational power, the algorithm does its job of detecting/tracking, later based on signals of touch, wash, detect in database on cloud particular cloud function triggers and send a notification to the customer or to the officials. For on-premise we used a raspberry pi/computer where the cc camera sent its data to it instead of cloud and on-premise only detections and all can be done later can be sent to the cloud for an asynchronous process with the world.
+
+
+
+
+To reach our goal we tested a few models and gathered meta-information which outstands others and gathered the following results
+
+
+  
+
+(up)Architecture Diagram of Corona_touch_app
+
+
+
+
+Comparisons of Yolov3 vs SSD vs r-CNN vs mask-rcnn|Verdict|Test images 
+Display::
+
+
+  
+
+  
+  
+
+  
+  
+
+Fig: i)Accuracy(static) ii)Accuracy(dynamic stream) iii)GPU(Training) time iv)Memory used v)Speed(FPS),of mask_rcnn,SSD,CNN,yolov3 respectively
+
+
+Observations of the Experimental analysis :
+-  All these graphs are plotted by taking the average of 500 images / 2min length video which is used as validation/testing data and this was split at first while training into train and testing dataset
+- Observing accuracy we see that clearly yolov3 is ahead by just an inch but it is because of testing was done on video(more dense footage) if it was done on the static frame then rCNN is powerful as it is dense in computation and then yolov3 stands but as our case of the project is to detect(touch) in motion we use yolov3 only and mask_rcnn is also of no use for us as in test images as you can see it is detecting vase, bottle, toothbrush too in the image which aren’t present and it further creating noise in the picture and also we want overlap/touch/inside the box of the door but don’t want masking, which is mostly used for SIFT & SURF algorithms or for the foreground to background inverses also door is also not being detected.
+- As you can see the fps graph which infers us that yolov3 is powerful for dynamic motions and that with the accuracy(dynamic) first graph further adds that average accuracy for the yolov3 when taking accuracy as a parameter is more with comparison to others. Though yolov3 is a sparse algorithm in comparison to rCNN, which is dense and can find even small objects in the picture which may be closely compacted, as our case in this project is just to sense the touch of hand with objects(door, chair) which are way bigger in comparison to microorganism, etc, So we opted yolo3 for its faster predictions(as once we detect for 10s its enough for next 10s so it may not detect most accurately for every frame but whenever it detects then it detects with high accuracy and we need not monitor our touch for every second our frame just want to see if touch is been done for every 5-10seconds and yolov3 is perfect in that department as its processing most frames per second)
+
+
+-  Average fps is way less than that of Max fps shown in the graph but still yolov3 with 40 is a good score for average.
+
+
+-  As we are using macro particles so the resolution is decreased using cloud function trigger(on the cloud) and is sent to the algorithm so fps is quietly increased and out average is now bumped close to 60 with max at 92fps, so with a trade-off between speed and accuracy, we can achieve our project goal to detect hand touching door/chair or any object around with those details, though accuracy is also good close to 96% all graph is evidence for these and this also makes less use of computation on GPU(cost-effective on GPU/CPU) as the resolution in diminished by 10's scale.
+
+
+
+
+  
+  
+  
+  
+
+Fig: (i)mask_rcnn           (ii)ssd                         (iii)r-cnn                     (iv)yolov3
+
+
+Final output of the observations: 
+
+
+Fig: Final Console output for average accuracy, max fps of all algorithms
+  
+
+Fig: Final Console output for accuracy score of custom training of Yolov3 algorithms
+  
+  
+
+Preprocessing steps & Training:
+In our case study after training lots of images with four algorithms and performing average analysis we found that using Yolov3 is best suited for our vision to be accomplished. So then we started full-fledged testing and implementing the project using yolov3. We preprocessed the images of the human hand, door, and common objects in context(COCO) and generated the labels for coordinates in Yolo format by getting images from open image dataset v6 and. Once running the command to get those using OIDv4_Toolkit by Vittorio Mazzia we managed to download all the images and used a custom script to convert Protobuf formatted label to yolov3 format and Coming to the training of Yolov3 first of all as we are using darknet which is entirely written in C++ we need to build OpenCV from scratch as merely using import command OpenCV-python is satisfied for python applications but to satisfy other languages(C++) too so we needed to do like this. And we used trained some objects and used transfer learning and pretrained our custom images with darknet.conv.53 pre-trained weights and classes
+classes =4
+train = data/train.txt
+valid = data/test.txt
+names = data/obj.names
+backup = backup/
+[custom training]
+
+
+1)Opencv(Computer Vision tool) build::
+
+
+               We downloaded the Opencv core file along with extra modules file and then in core file configure and then generate make file to fit to the GPU/CPU local pc architecture and you can add extra modules too in CMAKE(makefile generating software) so that all the generated files will be put in your destination file after you giving the source(from Opencv core). Later go to the destination folder and find the solution file for OpenCV and build and install.
+               We used this(OpenCV) for pretty much loading and displaying video and drawing contours, plotting the features in the video stream.
+
+
+        2)Darknet(C++ data science framework)/yolo3(computer vision library):
+               
+               Now we downloaded darknet file and extracted in the destination folder to have our build files, used CMAKE to configure and generate from the makefile, here we enabled CUDA(NVIDIA’s architecture for data science and GPU intensive workloads), CUDNN, GPU by just check boxing or turning them manually to 1 from 0.
+then installed solution file which was generated in destination binaries
+Now we had yolov3 written in c++ for image/video/webcam detections.But here is what a catch as we are going to use this setup for a custom model so we needed to write python scripts that were used as a wrapper to original darknet repository and those scripts are used to detect and track(deep sort) human hands touching the chair. door, COCO and send the relevant details to the database.
+
+
+Training details :
+!nvcc --version
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Sun_Jul_28_19:07:16_PDT_2019
+Cuda compilation tools, release 10.1, V10.1.243
+
+
+GPU: 1xTesla K80 , compute 3.7, having 2496 CUDA cores , 12GB GDDR5 VRAM
+
+
+CPU: 1xsingle core hyper threaded Xeon Processors @2.3Ghz i.e(1 core, 2 threads)
+
+
+RAM: ~12.6 GB Available
+
+
+Disk: ~33 GB Available
+
+
+
+
+CUDA-version: 10010 (10010), cuDNN: 7.6.5, GPU count: 1  
+ OpenCV isn't used - data increase will run slowly 
+yolov3-custom
+ compute_capability = 600, cudnn_half = 0 
+net.optimized_memory = 0
+
+
+Fig: Loss overtime /per iterations
+
+
+  
+
+
+
+  
+
+
+
+(Testing: Initial output of detections[with coordinates and metadata stored in database])
+
+
+Training Pics[screenshots]::
+CUDA-version: 10010 (10010), cuDNN: 7.6.5, GPU count: 1  
+ OpenCV isn't used - data increase will run slowly 
+yolov3-custom
+ compute_capability = 600, cudnn_half = 0 
+net.optimized_memory = 0 
+mini_batch = 2, batch = 64, time_steps = 1, train = 1 
+   layer   filters  size/strd(dil)      input                output
+   0 conv     32       3 x 3/ 1    416 x 416 x   3 ->  416 x 416 x  32 0.299 BF
+   1 conv     64       3 x 3/ 2    416 x 416 x  32 ->  208 x 208 x  64 1.595 BF
+   2 conv     32       1 x 1/ 1    208 x 208 x  64 ->  208 x 208 x  32 0.177 BF
+   3 conv     64       3 x 3/ 1    208 x 208 x  32 ->  208 x 208 x  64 1.595 BF
+   4 Shortcut Layer: 1,  wt = 0, wn = 0, outputs: 208 x 208 x  64 0.003 BF
+   5 conv    128       3 x 3/ 2    208 x 208 x  64 ->  104 x 104 x 128 1.595 BF
+
+
+….till 4000 iterations
+
+
+Final output of training::
+[yolo] params: iou loss: mse (2), iou_norm: 0.75, cls_norm: 1.00, scale_x_y: 1.00
+Total BFLOPS 65.312 
+avg_outputs = 516922 
+ Allocate additional workspace_size = 52.43 MB 
+Loading weights from backup/yolov3-custom_last.weights...
+ seen 64, trained: 256 K-images (4 Kilo-batches_64) 
+Done! Loaded 107 layers from weights-file 
+Learning Rate: 0.001, Momentum: 0.9, Decay: 0.0005
+Saving weights to backup//yolov3-custom_final.weights
+
+
+Scenarios for use cases and workings :
+Intro to InHome based:
+
+
+What it basically does is whenever you touch any item for suppose in your house say for example chair with your hand, it keeps tracking this through cc_cam context 24x7. So whenever you touch your hand with a chair then that info(metadata) will be sent to the database.
+
+
+In a database with metadata info, we will be having 3 extra attributes which are
+1)Touch
+2)Wash
+3)Detect
+*all are preset to 0
+Which are actually binary-valued classes so logic high referred by 1 and vice versa
+
+
+
+
+Assume hand has been detected then metadata{
+Object:chair,
+Timestamp: ..,
+Coordinates: <of the contours of the chair and human hand>
+}
+Is sent to the database and Touch is now turned to 1 
+
+
+
+
+
+
+Case 1: Not washing hands
+Then Wash attribute will remain 0 and we will continue to the third step of our process.So now you will be continuing with your work, say working in the laptop that time our app will be running in background and webcam keeps on monitoring your actions(privacy equipped of course), whenever hand coming closer to your face is detected, in the database we check for Touch value being 1 if it is 0 then no alarm but if it is 1 and hand coming closer to face is detected which changes Detect to 1 then alarm is buzzed saying(“please wash your hands”)
+
+
+
+
+Case 2: Washing your hands
+
+
+This time Wash attribute changes to  1 and which in turn also changes Touch to 0 and erases previous touch history stored in Database as metadata. Now coming to the third stage whenever the hand coming closer to face is detected as Touch is 0 so no alarm and hence we are safe by cleaning hands 
+
+
+
+
+
+
+
+
+Back notes of notifications:
+Here whenever 
+1)touch is detected a notification is given to mobile regarding touch metadata info 
+2)whenever you washed then also notification is given that history erased and wash history with details(pose,skeleton info ,timestamps,etc)
+3)Whenever detection is done(not washing) then notification saying wash your hands and also gives previous touch histories with wash details
+4)Whenever detection is done(washing) then the notification is given regarding wash details and touch history too(is present in cached data(Redis))
+
+
+
+
+Where all Cloud functions and pub/sub::
+
+
+1)Whenever touch is detected of human_hand with chair a cloud function is activated to change the Touch variable to 1 and store the metadata in the database
+2)Whenever you wash your hands, using posenet/ml5.js info of poses and skeleton CLoud function changes Wash value to 1 and store the wash metadata in database and changing Touch to 0
+3)Whenever hand coming to face is detected then cloud function is used to change the Detect value to 1 and obviously not detected means again changing to 0 in real-time
+
+
+Later also checking to alarm or not by using the simply checking if both touch and detect attribute is 1 then only to shoot the alert
+
+
+And again for notifications and pub/sub(topic subscription):
+1)Touch==1
+-->notify chair coordinates,etc details
+  
+
+
+
+2)Wash==1
+-->wash details
+  
+  
+  
+  
+  
+
+3)Detect==1
+-->Laptop coordinates of hand and face crossed details,etc
+ 
+4)touch === '1' && detect === '1'
+-->Please wash your hand with all touch,wash,detected at which coordinated history
+  
+  
+  
+
+
+
+5)We also use Cloud functions to resize the images(Frames) in real time video feed to enhance the computational power and save storage space.
+
+
+We used deep sort for tracking frame by frame which enables to track all image throughout the duration of video feed once is being detected by the object detection at first frame if the detection of its presence is lost then the tracking is stopped for static(position of cam) video feed
+  
+  
+
+
+
+Fig: Initial database structure
+
+
+
+
+
+
+
+
+touch
+	wash
+	detect
+	Alert
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	0
+	0
+	1
+	0
+	0
+	0
+	1
+	1
+	0
+	1
+	0
+	0
+	0
+	1
+	0
+	1
+	 1
+	1
+	1
+	0
+	0
+	1
+	1(↓)
+	1
+	0
+	{0}
+	←
+	
+
+	
+
+	Fig: Table for decision making between the attributes
+
+
+
+
+ATM/Super Market SCENARIO
+
+
+Take the Top scenario as InHome scenario now following is InAtm/market scenario
+(using app & digital screen)
+
+
+Usage:: Using personal case for person’s care and digital screen for public care, so by automating we can take this method to a person's home so whenever he is working before PC then notifications and alerts can come based on his touches, washes and detections(hand coming closer to face).
+
+
+Finally for InATM/market scenario::
+
+
+We take few considerations (though it doesn’t affect that much)::
+1)CC_Cameras inside and outside of the ATM
+2)Session: Having secure access to the ATM entry gate using an ATM card, or we can simply keep a QR sheet for scanning.
+
+
+Start::
+A person P comes to have some money from ATM he keeps his ATM card to the port at the entry door to go inside the ATM if ATM is not of that type then we will arrange small QR poster near ATM entry which P uses via app to scan that QR so that Person P get a uniquely generated id which is used for his session of going in and coming out(lifetime=5-10 min or he can manually exit the session)(the person P must wash hands before opening the door from inside and also from ATM) during this period starting from the front side of the door to inside side of the door whatever he touches will be stored in the database all the touches belong under his name as he might have given his details in the bank account or app linked with mobile no(bank details) through which he scanned QR code. So now if he wash/sanitize his hands then touch history is erased for him not for ATM. So in view of single person scenario everything goes the same as we saw in the in-home scenario, so when working in front of the pc/laptop if he brings his hand closer to face then alarm and notifications go on accordingly.
+
+
+
+
+
+
+  
+
+ But here if we also implement in the view of ATM then it will help in society(masses) too like::
+        Case1: wash hands :
+
+
+Whenever the person coming to ATM and scans QR and get a session, now he needs to wash hands and touch the door and also check the digital display kept beside stating the previous touches of the citizen if there are any touches on any objects then touch them and wash hands or ask the security to sanitize them before touching (though if the security guard is there he sanitizes them before you see in display) (Person P also can sanitize as a responsible citizen). Now wash before opening the front entry door then take the money and sanitize again(as you touched the money) and open the door as P washed hands before and after the transaction or opening the door(front & back), display board will carry touch history as null as P washed his hands before touching anything so if you don’t wash your hands before touching anything then an alarm will blow and that will be recorded in display board so next person will be careful.[all the touch, wash/sanitize detection are the same as above(in-home based)][and in-home detections to work in the same way for pc detections].
+
+
+Case2: not washing hands
+If a person doesn’t wash his hands before opening the entry door and after taking money, before opening the door to go out of the ATM then he personally has to wash==0 and touch==1 and global values of touch is also 1 as he touched the objects without washing/(gloves on) hands. [as whenever wash becomes 1 then touch changes to 0 for all scenarios]So next Person needs to wash after they touch those objects or ask the security guard(he will do it before only) and next P can see these details on App or on digital display present beside as all data is synchronized.
+*Same goes for supermarkets we can use the existing cc cameras to monitor the touches of people and send that information on the fly to the inventory department later they can sanitize those areas in non-working hours. If the session scheme is used then the touches of individuals can also be sent to the customers too.
+  
+  
+  
+  
+  
+
+
+
+
+
+Conclusion:
+Finally based on experimental analysis and best-fit conditions we preferred Yolov3 with a pretrained model and custom training weights(Transfer learning) is the best fit compared to other algorithms like: mask-rCNN,SSD,rCNN. Yolov3 fastness and manageable accuracy is best suited for our goal and as even after compressing the images stream still, accuracy is kept to the par for our project, so by using this model we can bring in small change in society by helping the people in terms of their touches and also helping the Police members and officials so they can track the COVID positive person(X) travel, engagements history easily(“In Telangana 1039 case found at present”) and tracking all the history is very difficult as person X may not be remembering when/where he met person Y, etc and police need to investigate and thereby they are losing their right to care, so our App makes all that hustle eased away with the analysis and details of touch of things, engagements, travel history, etc. A person who is authenticated with this app will be notified for his movements if he didn't wash his hands and he further be monitored in his home (using his laptop or anything in virtual env so that it will also be in the boundary of privacy). If he is bringing his hands closer to face after touching anything, coming from outside and not washing hands then notification of buzzer will blow. In the shopping market only the customer touched area can be sanitized instead of sanitizing all fruits/vegetables, as excessive sanitization of those also have adverse effects and costly. It can be used for road traffic detection of following social distance or by using drones/Traffic cc_cams,two-person are at min distance away or not and analyzing from that. In ATM to see if the person is sanitized before and after transaction to avoid society and himself/herself respectively prone to Covid-19.
+.. The End ..
+Link for Video Demo : https://youtu.be/iwSNO8O-xvY
+
+
+
+
+Ways to host and Note:
+ReadMe::
+*handdetect folder contains codes for the webend side *detector.py and tracker.py are the files for object tracking of the hand touching with the chair using custom training+pretrained model-->Transfer Learning(Complete size of the project is some 5GB or so this is just small important chunks for complete project please feel free to contact me) *index.js some cloud functions employed for the project. *hand_touch.apk is the Android app just to empower notifications and alerts,posenet.js sample code for the action of washing/sanitizing in home or in ATM *You need to setup camera for monitoring/tracking
+Note ::
+Watch the video link given to get complete idea(First 4 min gives demo later goes with implementations)
+During the quarantine period(Covid-19) let's build something techy using yolov3,tensorflow&.js(object tracking detecting),deepsort,GCP's cloud functions,pub/sub with cross languages support node.js,python ,database data store/Firestone/realtime firebase

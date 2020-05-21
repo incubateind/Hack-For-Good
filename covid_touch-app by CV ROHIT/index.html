@@ -1,0 +1,171 @@
+<!--Main file for detections and cloud functions are deployed to cloud-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<audio src="wash.m4a" id="audio"></audio>
+
+	<video id="video"></video>
+
+	<canvas id="canvas"></canvas>
+	<script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+	<script>
+
+		//const firebase = require("firebase");
+// Required for side-effects
+//require("firebase/firestore");
+
+
+  firebase.initializeApp({
+  apiKey: "AIzaSyBgnTCxpcESuSdjVKZN2VuuK-w44paBzjs",
+  authDomain: "gcpproject-271606.firebaseapp.com",
+  projectId: "gcpproject-271606",
+});
+
+
+  // Initialize Firebase
+  //firebase.initializeApp(firebaseConfig);
+  //firebase.analytics();
+  const db=firebase.firestore();
+  db.settings({timestampsInSnapshots : true});
+
+
+
+
+
+const modelParams = {
+  flipHorizontal: true,   // flip e.g for video 
+  imageScaleFactor: 0.7,  // reduce input image size for gains in speed.
+  maxNumBoxes: 20,        // maximum number of boxes to detect
+  iouThreshold: 0.5,      // ioU threshold for non-max suppression
+  scoreThreshold: 0.79,    // confidence threshold for predictions.
+}
+
+
+
+navigator.getUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia;
+
+//Select everthing in html
+
+const video=document.querySelector('#video');
+const audio=document.querySelector('#audio');
+const canvas=document.querySelector('#canvas');
+const context=canvas.getContext('2d');
+let model;
+
+
+handTrack.startVideo(video).then(status =>{
+
+	if(status){
+		navigator.getUserMedia(
+			{video:{} },
+			stream =>{
+			video.srcObject =stream;//observer is webcam which observes the surroundings
+			setInterval(runDetection,1000);
+			runDetection();//for multiple times running
+
+		},
+		err =>console.log(err)
+		);
+
+	}
+});
+
+function runDetection(){
+
+	model.detect(video)
+	.then(predictions =>{
+		//console.log(predictions);
+		model.renderPredictions(predictions,canvas,context,video);
+		if(predictions.length>0){
+			/*db.collection("hand").add({
+    		detect: '1'
+			})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});*/
+
+/*var docRef = db.collection("hand").doc("qbU4TAyNsHIId16dZacl");
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        let t = doc.data().touch;
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});*/
+
+
+
+
+var washingtonRef = db.collection("hand").doc("qbU4TAyNsHIId16dZacl");
+
+// Set the "capital" field of the city 'DC'
+return washingtonRef.update({
+    detect: '1'
+})
+.then(function() {
+    console.log("Document successfully updated!");
+    //audio.play();
+			
+})
+.catch(function(error) {
+    // The document probably doesn't exist.
+    console.error("Error updating document: ", error);
+});
+
+
+
+
+			
+			
+		}else{
+
+
+audio.pause();
+
+			var washingtonRef2 = db.collection("hand").doc("qbU4TAyNsHIId16dZacl");
+
+// Set the "capital" field of the city 'DC'
+return washingtonRef2.update({
+    detect: '0'
+})
+.then(function() {
+    console.log("Document successfully updated!");
+			
+})
+.catch(function(error) {
+    // The document probably doesn't exist.
+    console.error("Error updating document: ", error);
+});
+
+
+					}
+		//requestAnimationFrame(runDetection);//for multiple times running
+	});
+}
+
+handTrack.load(modelParams).then(lmodel =>{
+model=lmodel;
+});
+
+
+  
+</script>
+
+	<!--<script src="app.js"> </script>-->
+</body>
+</html>
